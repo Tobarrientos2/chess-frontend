@@ -9,6 +9,7 @@ type Props = {
 function Controls({ game }: Props): JSX.Element {
   return (
     <div className="controls" data-testid="controls">
+      //Reset Button
       <button
         onClick={() => {
           game.reset();
@@ -16,6 +17,7 @@ function Controls({ game }: Props): JSX.Element {
       >
         reset
       </button>
+      //Button for undo
       <button
         onClick={() => {
           game.undo();
@@ -23,6 +25,7 @@ function Controls({ game }: Props): JSX.Element {
       >
         {"<"}
       </button>
+      //Button for redo
       <button
         onClick={() => {
           game.redo();
