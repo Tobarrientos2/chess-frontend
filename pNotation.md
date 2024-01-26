@@ -19,21 +19,21 @@ m (Method/Function): The prefix 'm' is used for methods or functions. This prefi
 
 "Pseudo Notation" is particularly useful in large and complex projects, where consistency and clarity in nomenclature can significantly impact the efficiency of code development and maintenance. -->
 
-### Index
+######### Index
 
-# A - Game Elements
+### A - Game Elements
 AA (Session): Game session management.
 AB (Timer): Timers and time control.
 AC (Listeners): Listeners for game events (moves, state changes).
 AD (History): Move and game history.
 AE (Storage): Game data storage and retrieval.
 
-# B - Chess Instance and Actions
+### B - Chess Instance and Actions
 BA (Chess constructor): Constructor for creating chess game instances.
 BB (ChessInstance): Active chess game instance, including current state, allowed moves, check validations, etc.
 BC (FLAGS): Flags to indicate specific events in a move (capture, check, promotion, etc.).
 
-# C - Chess Pieces
+### C - Chess Pieces
 CA (Pawn): Pawns and their specific moves.
 CB (Knight): Knights and their L-shaped moves.
 CC (Bishop): Bishops and their diagonal moves.
@@ -41,15 +41,15 @@ CD (Rook): Rooks and their straight-line moves.
 CE (Queen): Queens and their combined moves.
 CF (King): Kings and their limited moves.
 
-# D - Colors and Squares
+### D - Colors and Squares
 DA (White/Black): Management of white and black pieces.
 DB (Square): Representation and control of board squares (a8, b6, etc.).
 
-#####
+###############
 
-### PseudoNotionation Dictionary 
+######### PseudoNotionation Dictionary 
 
-## AA-Session
+###### AA-Session
 iAAChess_obj: Instance of the chess game ChessInstance.
 iAAListeners_obj: Listeners for the game session GameSessionListeners.
 iAATimer_obj: Timer for the game session GameSessionTimer.
@@ -76,30 +76,30 @@ void_mAAOnBoardChange_listener_void: Method to subscribe to board changes.
 void_mAAOnTimerChange_listener_void: Method to subscribe to timer changes.
 void_mAATrigger_event_void: Trigger a specific event in the session.
 
-# AB-Timer
+### AB-Timer
 iABWhite_num: Remaining time for the white player.
 iABBlack_num: Remaining time for the black player.
 
-# AC-Listeners
+### AC-Listeners
 arr_ACMove_fn_arr: Array of functions to listen to moves. Each function takes a position (string) and doesn't return anything (void).
 arr_ACTimer_fn_arr: Array of functions to listen to timer changes. Each function takes a AB-Timer object and doesn't return anything (void).
 
-# AD-History
+### AD-History
 iADTimer_obj: Timer for the game session AB-Timer.
 iADPosition_str: Current game position in string format.
 
-# AE-Storage
+### AE-Storage
 iAEHistory_arr: History of the game session AD-History.
 iAETimer_obj: Timer for the game session AB-Timer.
 iAEPosition_str: Current game position in string format.
 iAECurrentIndex_num: Current index in the AD-History.
 
-# BA-Chess constructor => Chess
+### BA-Chess constructor => Chess
 // (fen?: string): ChessInstance;
 // new (fen?: string): ChessInstance;
 @= txt_mBAChessConstructor_fen_obj Chess("fenString")++ // Create a new game instance with the specified FEN configuration
 
-# BB-Chess Instance
+### BB-Chess Instance
 txt_mBBLoad_fen_bool: Load a position from a FEN string.
 void_mBBResetBoard_void: Reset the board to the initial position.
 arr_mBBGetListOfMovements__options_arr: Get a list of legal moves.
@@ -131,7 +131,7 @@ txt_mBBDeleteComment_void_txt: Delete the current comment.
 arr_mBBGetComments_void_arr: Get all comments.
 void_mBBDeleteAllComments_void: Delete all comments.
 
-# BC-FLAGS
+### BC-FLAGS
 iBCNormal_str: Move without capture.
 iBCCapture_str: Standard capture.
 iBCBigPawn_str: Pawn's two-square advance.
@@ -140,29 +140,29 @@ iBCPromotion_str: Pawn promotion.
 iBCKsideCastle_str: Kingside castling.
 iBCQsideCastle_str: Queenside castling.
 
-# CA-Pawn
+### CA-Pawn
 iCAPawn_obj: Represents pawns and their specific movements.
 
-# CB-Knight
+### CB-Knight
 iCBKnight_obj: Represents knights and their L-shaped movements.
 
-# CC-Bishop
+### CC-Bishop
 iCCBishop_obj: Represents bishops and their diagonal movements.
 
-# CD-Rook
+### CD-Rook
 iCDRook_obj: Represents rooks and their straight-line movements.
 
-# CE-Queen
+### CE-Queen
 iCEQueen_obj: Represents queens and their combined movements.
 
-# CF-King
+### CF-King
 iCFKing_obj: Represents kings and their limited movements.
 
-# DA-White/Black
+### DA-White/Black
 iDAWhite_obj: White Pieces
 iDABlack_obj: Black Pieces
 
-# DB-Square
+### DB-Square
 iDBSquare_obj: Representation and control of the chessboard squares (a8, b6, etc.).
 
 
